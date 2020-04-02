@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>tab卡片菜单导航制作</title>
+		<style type="text/css">
+			@media  screen and (min-width:1200px){
+				html{
+					font-size:25px;
+				}
+			}
+			@media  screen and (min-width:800px) and (max-width:1200px){
+				html{
+					font-size:20px;
+				}
+			}
+			@media  screen and (max-width:800px){
+				html{
+					font-size:15px;
+				}
+			}
+			*{
+				margin:0;
+				padding:0;
+			}
+			/* html,body{
+				height:100%;
+				width:100%;
+			} */
+			div{
+				width:36rem;
+				height:2.2rem;
+				border-bottom:0.1rem solid black;
+				margin: 5rem auto;
+			}
+			div ul li{
+				list-style:none;
+				float:left;
+			}
+			div ul li a{
+				width:5rem;
+				height:2rem;
+				display:block;
+				border:0.05rem solid #CACED2;
+				margin: 0 0.5rem;
+				margin-top:0.1rem;/* 初始状态  存在margin-top:0.1rem; */
+				border-bottom:none;
+				text-align:center;
+				line-height:2rem;
+				color:#CACED2;
+				background-color:#f7f7f7;
+				text-decoration: none;
+			}
+			div ul li a:hover{
+				height:2.2rem;
+				border:0.1rem solid black;
+				border-bottom:none;
+				color:black;
+				margin-top:0;/* 最终状态  存在margin-top:0; */
+				background-color:white;
+			}
+			.active{
+				height:2.2rem;
+				border:0.1rem solid black;
+				border-bottom:none;
+				color:black;
+				margin-top:0;/* 最终状态  存在margin-top:0; */
+				background-color:white;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li><a href="#"class="active">tab-1</a></li>
+				<li><a href="#">tab-2</a></li>
+				<li><a href="#">tab-3</a></li>
+				<li><a href="#">tab-4</a></li>
+				<li><a href="#">tab-5</a></li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			$("li").click(function(){
+				var index = $(this).index();
+				$("a").removeClass("active");
+				$("a").eq(index).addClass("active");
+			})
+		</script>
+	</body>
+</html>

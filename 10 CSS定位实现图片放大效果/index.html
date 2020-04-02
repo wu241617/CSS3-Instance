@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS定位实现图片放大效果</title>
+		<style type="text/css">
+			/*【1】 图片默认会向下撑开3像素，解决方法：img{display:block;}
+			  【2】 解决高度塌陷的方法：
+			      1，给父元素添加overflow:hidden;缺点是不能和定位一起使用
+			      2，给所有浮动元素的后面添加一个空元素，并声明clear:both;
+			  【3】 显示隐藏：显示用：display:block; 隐藏用：display:none; 
+			 */
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				height:100%;
+			}
+			img{
+				display:block;
+			}
+			.listbox{
+				width:1020px;
+				height:800px;
+				margin:50px auto;
+				/* border:2px solid black; */
+			}
+			.listbox h3{
+				width:1020px;
+				text-align:center;
+				font-size:17px;
+				color:darkorange;
+				border-bottom:1px dashed black;
+				padding-bottom:10px;
+				margin-bottom:13px;
+			}
+			.list{
+				clear: both;
+			}
+			.list .pic{
+				width:210px;
+				padding:6px;
+				border:1px solid darkgreen;
+				margin:15px;
+				position:relative;
+				float:left;
+			}
+			.list .pic img{
+				width:200px;
+				height:150px;
+				padding:3px;
+				border:1px solid darkgreen;
+			}
+			.list .pic img:nth-of-type(2){
+				display:none;
+				width:250px;
+				height:200px;
+				position:absolute;
+				top:-20px;
+				left:-20px;
+				z-index: 12;
+			}
+			.list .pic:hover img:nth-of-type(2){
+				display:block;
+			}
+			.listbox .class1{
+				width:1020px;
+				text-align:center;
+				font-size:17px;
+				color:darkgray;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="listbox">
+			<h3>Hoverbox Image Gallery</h3>
+			<div class="list">
+				<div class="pic">
+					<img src="img/pic1.jpg" alt="图片加载失败！">
+					<img src="img/pic1.jpg" alt="图片加载失败！">
+				</div>
+				<div class="pic">
+					<img src="img/pic2.jpg" alt="图片加载失败！">
+					<img src="img/pic2.jpg" alt="图片加载失败！">
+				</div>
+				<div class="pic">
+					<img src="img/pic3.jpg" alt="图片加载失败！">
+					<img src="img/pic3.jpg" alt="图片加载失败！">
+				</div>
+				<div class="pic">
+					<img src="img/pic4.jpg" alt="图片加载失败！">
+					<img src="img/pic4.jpg" alt="图片加载失败！">
+				</div>
+				<div class="pic">
+					<img src="img/pic5.jpg" alt="图片加载失败！">
+					<img src="img/pic5.jpg" alt="图片加载失败！">
+				</div>
+				<div class="pic">
+					<img src="img/pic6.jpg" alt="图片加载失败！">
+					<img src="img/pic6.jpg" alt="图片加载失败！">
+				</div>
+				<div class="pic">
+					<img src="img/pic7.jpg" alt="图片加载失败！">
+					<img src="img/pic7.jpg" alt="图片加载失败！">
+				</div>
+				<div class="pic">
+					<img src="img/pic8.jpg" alt="图片加载失败！">
+					<img src="img/pic8.jpg" alt="图片加载失败！">
+				</div>
+				<div style="width:1020px;height:410px;border-bottom:1px dashed black;margin-bottom:10px;"></div>
+				<p class="class1">XHTML CSS 508 | Hoverbox BY Nathan Smith | Read the Tutoriual</p>
+			</div>
+		</div>
+	</body>
+</html>

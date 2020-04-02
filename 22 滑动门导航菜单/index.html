@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>滑动门导航菜单</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			div{
+				height:135px;
+				width:1000px;
+				margin: 100px auto;
+			}
+			div ul li{
+				list-style:none;
+				float:left;
+			}
+			div ul li a{
+				text-decoration:none;
+				display:block;
+				height:135px;
+				padding: 0 30px;
+				line-height:135px;
+				font-size:22px;
+				color:black;
+				font-weight:bold;
+			}
+			div ul li a:hover{
+				color:blue;
+			}
+			.active{
+				color:blue;
+				background:url(./img/nav-left.png) no-repeat,url(img/nav-right.png) no-repeat right center;
+			}
+			div ul li:hover{
+				background:url(./img/nav-left.png) no-repeat;
+			}
+			div ul li:hover a{
+				background:url(img/nav-right.png) no-repeat right center;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li><a href="#" class="active">首页</a></li>
+				<li><a href="#">美景欣赏</a></li>
+				<li><a href="#">游客留言</a></li>
+				<li><a href="#">酒店推荐</a></li>
+				<li><a href="#">路线规划</a></li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			$("li").click(function(){
+				var index = $(this).index();
+				$("a").removeClass("active");
+				$("a").eq(index).addClass("active");
+			})
+		</script>
+	</body>
+</html>

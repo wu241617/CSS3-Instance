@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>至美创意首页的制作</title>
+		<link rel="stylesheet" type="text/css" href="index.css" >
+		<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	</head>
+	<body>
+		<!-- top -->
+		<div id="top">
+			<p>联系电话：18637175382</p>
+		</div>
+		
+		<!-- nav -->
+		<div id="nav">
+			<h1>至美创意</h1>
+			<ul>
+				<li><a href="#" style="border-left:none;" class="active">首页</a></li>
+				<li><a href="#">关于至美</a></li>
+				<li><a href="#">成功案例</a></li>
+				<li><a href="#">新闻中心</a></li>
+				<li><a href="#">在线咨询</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+		</div>
+		
+		<!-- banner -->
+		<div id="banner"></div>
+		
+		<!-- link -->
+		<div id="link">
+			<div><a href="#">关于至美</a></div>
+			<div><a href="#">成功案例</a></div>
+			<div><a href="#">新闻中心</a></div>
+			<div><a href="#">在线咨询</a></div>
+			<div><a href="#">联系我们</a></div>
+		</div>
+		
+		<!-- case -->
+		<div id="case">
+			<div class="case0">
+				<p>
+					<span>Case</span>
+					<span>Show</span>
+				</p>
+				<hr>
+				<p style="color:white;">案例展示</p>
+			</div>
+			<ul>
+				<li><img src="img/3.jpg" alt="图片加载失败！"></li>
+				<li><img src="img/4.jpg" alt="图片加载失败！"></li>
+				<li><img src="img/5.jpg" alt="图片加载失败！"></li>
+				<li><img src="img/6.jpg" alt="图片加载失败！"></li>
+				<li><img src="img/7.jpg" alt="图片加载失败！"></li>
+			</ul>
+		</div>
+		
+	    <!-- about-->
+		<div id="about">
+			<div class="case0">
+				<p>
+					<span>About</span>
+					<span>Us</span>
+				</p>
+				<hr>
+				<p style="color:white;">关于我们</p>
+			</div>
+			<div class="about1">
+				<h2>至美创意，因为<b>专注</b>，所以<b>专业</b>。</h2>
+				<p><a href="#">创意的魅力，往往是说不出来的迷人，我们希望能成功事...</a></p>
+				<p><a href="#">文艺青年最为喜爱的地方，人们利用自己闲暇的时间，去创作，没有可以的安排，从而完整。</a></p>
+			</div>
+		</div>
+		
+		<!-- process -->
+		<div id="process">
+			<div class="case0">
+				<p>
+					<span>Service</span>
+					<span>Process</span>
+				</p>
+				<hr>
+				<p style="color:white;">服务流程</p>
+			</div>
+			<p class="process1">项目洽谈，根据需求报价 --> 预付定金，开始设计 --> 修改定稿，完成设计 --> 签收付款尾</p>
+		</div>
+		
+		<!-- bottom -->
+		<div id="bottom">
+			<ul>
+				<li><a href="#" style="border-left:none;">首页</a></li>
+				<li><a href="#">关于至美</a></li>
+				<li><a href="#">成功案例</a></li>
+				<li><a href="#">在线查询</a></li>
+			</ul>
+			<p>Copyright &copy; 2014-2015 至美创意工作室</p>
+			<p>技术支持:凡客建站|管理登录</p>
+		</div>
+		
+		<script type="text/javascript">
+			$("#nav ul li").click(function(){
+				var index = $(this).index();
+				
+				$("#nav ul li a").removeClass("active");
+				
+				$("#nav ul li a").eq(index).addClass("active");
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS弹性盒构建骰子布局</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				height:100%;
+				width:100%;
+			}
+			div{
+				width:200px;
+				height:200px;
+				margin-top:100px;
+				background-color:darkblue;
+				border:2px solid red;
+				float:left;
+				border-right:none;
+				display:flex;
+				box-sizing: border-box;/*=== 怪异盒模型 padding 和 border值不算入宽高 ===*/
+				justify-content: center;/* 主轴对齐方向 */
+				align-items: center;/* 侧轴对齐方式 */
+			}
+			div:nth-child(6){
+				border-right:2px solid red;
+			}
+			div:nth-child(1){
+				margin-left:200px;
+			}
+			div span{
+				width:50px;
+				height:50px;
+				display:block;
+				border-radius:50%;
+				background-color:red;
+				color:white;
+				text-align:center;
+				line-height:50px;
+			}
+			div:nth-child(1){
+				justify-content: center;
+				align-items: center;
+			}
+			div:nth-child(2){
+				justify-content: space-around;
+				align-items: center;
+			}
+			div:nth-child(3){
+				justify-content: space-around;
+				align-items: center;
+				padding:10px;
+			}
+			div:nth-child(3) span:nth-child(1){
+				align-self: flex-start;/* 子元素排列方式 */
+			}
+			div:nth-child(3) span:nth-child(3){
+				align-self: flex-end;
+			}
+			nav{
+				width:200px;
+				height:50px;
+				/* background-color:firebrick; */
+				display:flex;
+				justify-content: space-around;
+			}
+			div:nth-child(4){
+				flex-wrap: wrap;/* 是否允许换行 */
+			}
+			div:nth-child(5){
+				flex-wrap: wrap;
+				padding:10px;
+			}
+			div:nth-child(6){
+				flex-wrap: wrap;
+				padding:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span>1</span>
+		</div>
+		<div>
+			<span>2</span>
+			<span>2</span>
+		</div>
+		<div>
+			<span>3</span>
+			<span>3</span>
+			<span>3</span>
+		</div>
+		<div>
+			<nav>
+				<span>4</span>
+				<span>4</span>
+			</nav>
+			<nav>
+				<span>4</span>
+				<span>4</span>
+			</nav>
+		</div>
+		<div>
+			<nav>
+				<span>5</span>
+				<span>5</span>
+			</nav>
+			<nav>
+				<span>5</span>
+			</nav>
+			<nav>
+				<span>5</span>
+				<span>5</span>
+			</nav>
+		</div>
+		<div>
+			<nav>
+				<span>6</span>
+				<span>6</span>
+			</nav>
+			<nav>
+				<span>6</span>
+				<span>6</span>
+			</nav>
+			<nav>
+				<span>6</span>
+				<span>6</span>
+			</nav>
+		</div>
+	</body>
+</html>

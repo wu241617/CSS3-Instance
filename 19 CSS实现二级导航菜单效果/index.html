@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS实现二级导航菜单效果</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				height:100%;
+				width:100%;
+			}
+			div{
+				height:40px;
+				width:800px;
+				margin: 50px auto;
+				background:linear-gradient(#cccccc,#8f8f8f);
+				/*水平时添加  position: relative; */
+			}
+			div ul li{
+				list-style:none;
+				float:left;
+			}
+			div ul li a{
+				text-decoration: none;
+				color:black;
+				display:block;
+				width:100px;
+				height:40px;
+				text-align:center;
+				line-height:40px;
+			}
+			div ul li a:hover{
+				background-color:black;
+				color:white;
+			}
+			div ul li ol{
+				display:none;
+				position:absolute;
+			   /* left:0; */
+				width:100px; /* 水平时，注释掉 width:100px; 加上left:0; 给父元素div加上 position:relative;*/
+				background:linear-gradient(#cccccc,#8f8f8f);
+			}
+			div ul li:hover ol{
+				display:block;
+			}
+			.active{
+				background-color:black;
+				color:white;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li class="item"><a href="#" class="a1 active">首页</a></li>
+				<li  class="item">
+					<a href="#" class="a1">项目</a>
+					<ol>
+						<li><a href="#">项目1</a></li>
+						<li><a href="#">项目2</a></li>
+						<li><a href="#">项目3</a></li>
+						<li><a href="#">项目4</a></li>
+					</ol>
+				</li>
+				<li  class="item">
+					<a href="#" class="a1">案例</a>
+					<ol>
+						<li><a href="#">案例1</a></li>
+						<li><a href="#">案例2</a></li>
+						<li><a href="#">案例3</a></li>
+						<li><a href="#">案例4</a></li>
+						<li><a href="#">案例5</a></li>
+						<li><a href="#">案例6</a></li>
+						<li><a href="#">案例7</a></li>
+						<li><a href="#">案例8</a></li>
+					</ol>
+				</li>
+				<li  class="item"><a href="#" class="a1">产品</a></li>
+				<li  class="item"><a href="#" class="a1">访问</a></li>
+				<li  class="item"><a href="#" class="a1">价格</a></li>
+				<li  class="item"><a href="#" class="a1">重量</a></li>
+				<li  class="item"><a href="#" class="a1">体积</a></li>
+			</ul>
+		</div>
+	
+	<script type="text/javascript">
+		$(".item").click(function(){
+			var index = $(this).index();
+			$(".a1").removeClass("active");
+			$(".a1").eq(index).addClass("active");
+		})
+		
+		$("ol li").click(function(){
+		   var index = $(this).index();
+		   $("ol li a").removeClass("active");
+		   $("ol li a").eq(index).addClass("active");
+		   
+		    $(this).parent().prev().html($(this).text());
+		})
+	</script>
+	</body>
+</html>

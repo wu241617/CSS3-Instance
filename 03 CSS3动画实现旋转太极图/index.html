@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS3动画实现旋转太极图</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				height:100%;
+			}
+			body{
+				background-color:gray;
+			}
+			.box{
+				width:300px;
+				height:300px;
+				margin:100px auto;
+				position: relative;
+				animation: move 2s infinite linear;
+			}
+			.black0{
+				width:300px;
+				height:300px;
+				border-radius: 50%;
+				background-color:black;
+			}
+			.white0{
+				width:150px;
+				height:300px;
+				background-color:white;
+				border-top-right-radius: 150px;
+				border-bottom-right-radius: 150px;
+				position: absolute;
+				top:0;
+				right:0;
+			}
+			.black1{
+				width:150px;
+				height:150px;
+				border-radius: 50%;
+				background-color:black;
+				position:absolute;
+				top:0;
+				left:75px;
+			}
+			.white1{
+				width:150px;
+				height:150px;
+				border-radius: 50%;
+				background-color:white;
+				position: absolute;
+                top:150px;
+				left:75px;
+  			}
+			.white2{
+				width:30px;
+				height:30px;
+				border-radius: 50%;
+				background-color:white;
+				position:absolute;
+				top:60px;
+				left:150px;
+			}
+			.black2{
+				width:30px;
+				height:30px;
+				border-radius:50%;
+				background-color:black;
+				position:absolute;
+				bottom:60px;
+				left:150px;
+			}
+			@keyframes move{
+				from{transform: rotateZ(0deg);}
+				to{transform: rotateZ(360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="black0"></div>
+			<div class="white0"></div>
+			<div class="black1"></div>
+			<div class="white1"></div>
+			<div class="white2"></div>
+			<div class="black2"></div>
+		</div>
+	</body>
+</html>

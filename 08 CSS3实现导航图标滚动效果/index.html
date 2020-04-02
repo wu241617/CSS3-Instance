@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS3实现导航图标滚动效果</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				height:100%;
+			}
+			.box{
+				width:1000px;
+				height:40px;
+				margin:100px auto;
+				border:2px solid black;
+			}
+			.box ul li{
+				list-style:none;
+				float:left;
+				display: block;
+				width:98px;
+				height:40px;
+				text-align:center;
+				line-height:40px;
+				border-right:1px dashed #696969;
+			}
+			.box ul li:nth-child(10){
+				border:none;
+			}
+			.box ul li a{
+				text-decoration: none;
+				color:darkgray;
+				display: block;
+				width:100px;
+				height:40px;
+			}
+			.box ul li a:hover{
+				background-color:black;
+				color:white;
+			}
+			.active{
+				background-color:black;
+				color:white;
+			}
+			.seach{
+				width:600px;
+				height:30px;
+				border:2px solid black;
+				margin:30px auto;
+				text-align:right;
+				color:darkgray;
+				padding-right:20px;
+				line-height:30px;
+			}
+			.seach1{
+				width:560px;
+				height:30px;
+				margin: 30px auto;
+				/* border:1px solid red; */
+			}
+			.seach1 input{
+				width:500px;
+				height:30px;
+				color:darkgray;
+			}
+			.seach1 button{
+				width:50px;
+				height:30px;
+				border:3px solid black;
+				cursor: pointer;
+			}
+			.seach1 button:hover{
+				background-color:cadetblue;
+				color:white;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	</head>
+	<body>
+		<div class="seach"><span>搜索</span></div>
+		<div class="box">
+			<ul>
+				<li><a href="#" class="active">我的主页</a></li>
+				<li><a href="#">新闻头条</a></li>
+				<li><a href="#">电视剧</a></li>
+				<li><a href="#">最新电影</a></li>
+				<li><a href="#">小说大全</a></li>
+				<li><a href="#">旅游度假</a></li>
+				<li><a href="#">小游戏</a></li>
+				<li><a href="#">正品购物</a></li>
+				<li><a href="#">美团外买</a></li>
+				<li><a href="#">移动互联</a></li>
+			</ul>
+		</div>
+		<div class="seach1">
+			<input type="text" placeholder="请输入你想要搜索内容的关键字">
+			<button>搜索</button>
+		</div>
+		
+		<script type="text/javascript">
+			$("li").click(function(){
+				var index = $(this).index();
+				
+				$("a").removeClass("active");
+				
+				$("a").eq(index).addClass("active");
+			})
+		</script>
+	</body>
+</html>

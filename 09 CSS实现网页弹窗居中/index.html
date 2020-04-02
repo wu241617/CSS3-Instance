@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS实现网页弹窗居中的三种方法</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			.box{
+				width:500px;
+				height:200px;
+				border:2px solid red;
+				background-color:green;
+				
+				/* 第一种方法-->定位 + margin 
+				position:fixed;
+				top:50%;
+				left:50%;
+				margin-top:-100px;
+				margin-left:-250px; */
+				
+			/* 	第二种方式-->定位 + transform
+				position:fixed;
+				top:50%;
+				left:50%;
+				transform: translate(-250px,-100px); */
+				
+				/* 第三种方法-=>定位 + 技巧
+				position:fixed;
+				top:0px;
+				bottom:0px;
+				left:0px;
+				right:0px;
+				margin:auto; */
+				
+			}
+			
+			/*第四种方法 -->弹性盒*/
+			 html,body{
+				height:100%;
+				width:100%;
+			}
+			body{
+				display:flex;
+				height:100%;
+				justify-content: center;
+				align-items: center;
+			}
+			.box{
+				width:500px;
+				height:200px;
+				border:2px solid red;
+				background-color:green;
+			} 
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

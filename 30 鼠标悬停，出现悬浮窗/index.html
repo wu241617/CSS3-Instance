@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>鼠标悬停，使用：after和：before出现悬浮窗</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			h3{
+				width:100px;
+				margin: 100px auto;
+				position:relative;
+				cursor:pointer;
+			}
+			h3:hover::before{
+				content:" Hello World !";
+				width:180px;
+				height:50px;
+				text-align:center;
+				line-height:50px;
+				display:block;
+				background-color:lightblue;
+				position:absolute;
+				top:-20px;
+				left:120px;
+			}
+			h3:hover::after{
+				content:"";
+				width:0;
+				height:0;
+				border-top:12px solid transparent;
+				border-bottom:12px solid transparent;
+				border-right:12px solid lightblue;
+				display:block;
+				position:absolute;
+				top:-5px;
+				left:108px;
+			}
+		</style>
+	</head>
+	<body>
+		<h3> Hover Me </h3>
+	</body>
+</html>

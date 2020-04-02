@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>旋转缩放动画特效三</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				height:100%;
+				width:100%;
+			}
+			div{
+				height:300px;
+				width:300px;
+				border-radius: 50%;
+				margin:50px auto;
+				background-color:black;
+				color:white;
+				font-size:48px;
+				text-align:center;
+				line-height:300px;
+				position:relative;
+			}
+			div p{
+				height:260px;
+				width:260px;
+				border-radius: 50%;
+				background-image:url(img/1.jpg);
+				border:20px solid rgba(255,255,255,.5);
+				background-origin: border-box;
+				position:absolute;
+				top:0;
+				transition:all 1.5s linear;
+				transform-origin: left center;
+			}
+			div:hover p{
+				transform: rotateY(180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			美景
+			<p></p>
+		</div>
+	</body>
+</html>

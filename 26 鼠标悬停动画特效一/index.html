@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>鼠标悬停动画特效</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background-color:darkgray;
+			}
+			div{
+				width:300px;
+				height:300px;
+				border-radius:50%;
+				margin: 100px auto;
+				background: url(img/pic-1.jpg) no-repeat center;
+				position:relative;
+				cursor:pointer;
+			}
+			div p{
+				width:280px;
+				height:280px;
+				border-radius:50%;
+				border:10px solid red;
+				border-top-color:chartreuse;
+				border-left-color:chartreuse;
+				transition:all 1s linear;/* CSS过度 */
+				background-color:rgba(0,0,0,0);
+			}
+			div:hover p{
+				transform:rotate(180deg);/* CSS动画 */
+				background-color:rgba(0,0,0,.6);
+			}
+			div h1{
+				color:white;
+				font-size:48px;
+				position:absolute;/* 子绝对定位，父相对定位 */
+				top:0;
+				left:0;
+				width:300px;
+				height:300px;
+				text-align:center;
+				line-height:300px;
+				opacity: 0;
+				transition:all 1s linear;
+			}
+			div:hover h1{
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p></p>
+			<h1>文字</h1>
+		</div>
+	</body>
+</html>

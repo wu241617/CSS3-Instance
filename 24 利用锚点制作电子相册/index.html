@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>利用锚点制作电子相册</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background-color:#626562;
+			}
+			.photo{
+				width:500px;
+				height:345px;
+				background-color:#D80000;
+				/* 页面垂直居中 */
+				position:fixed;
+				left:50%;
+				top:50%;
+				margin-top:-172.5px;
+				margin-left:-250px;
+				
+				border:3px solid black;
+			}
+			.photo h1{
+				text-align:center;
+				color:white;
+				padding: 20px 0;
+			}
+			.photo .pic-one{
+				width:280px;
+				height:196px;
+				background-color:#EAB306;
+				border:10px dotted white;
+				float:left;
+				margin: 0 30px;
+				overflow: hidden;
+			}
+			.photo .pic-two{
+				width:73px;
+				height:196px;
+				border:10px solid white;
+				float:left;
+				overflow-y: auto;/* 每一个方向上滚动条自动出现 */
+			}
+			.photo .pic-one img{
+				width:280px;
+				height:196px;
+			}
+			.photo .pic-two a img{
+				width:73px;
+				height:50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="photo">
+			<h1>电子相册</h1>
+			<div class="pic-one"><!-- 锚点链接的使用 -->
+				<img src="img/1.jpg" id="pic1">
+				<img src="img/2.jpg" id="pic2">
+				<img src="img/3.jpg" id="pic3">
+				<img src="img/4.jpg" id="pic4">
+				<img src="img/5.jpg" id="pic5">
+				<img src="img/6.jpg" id="pic6">
+				<img src="img/7.jpg" id="pic7">
+				<img src="img/8.jpg" id="pic8">
+			</div>
+			<div class="pic-two">
+				<a href="#pic1"><img src="img/1.jpg" ></a>
+				<a href="#pic2"><img src="img/2.jpg" ></a>
+				<a href="#pic3"><img src="img/3.jpg" ></a>
+				<a href="#pic4"><img src="img/4.jpg" ></a>
+				<a href="#pic5"><img src="img/5.jpg" ></a>
+				<a href="#pic6"><img src="img/6.jpg" ></a>
+				<a href="#pic7"><img src="img/7.jpg" ></a>
+				<a href="#pic8"><img src="img/8.jpg" ></a>
+			</div>
+		</div>
+	</body>
+</html>

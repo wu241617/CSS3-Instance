@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>纯CSS实现六边形</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			div{
+				height:104px;
+				width:60px;
+				background-color:red;
+				margin: 100px auto;
+				position:relative;
+				cursor:pointer;
+				transition:all 1.5s linear;
+			}
+			div:hover{
+				transform:rotate(180deg);
+			}
+			div::before{
+				content:"";
+				width:0;
+				height:0;
+				border-top:52px solid transparent;
+				border-bottom:52px solid transparent;
+				border-left:30px solid red;
+				display:block;
+				position:absolute;
+				top:0;
+				left:60px;
+			}
+			div::after{
+				content:"";
+				width:0;
+				height:0;
+				border-top:52px solid transparent;
+				border-bottom:52px solid transparent;
+				border-right:30px solid red;
+				display:block;
+				position:absolute;
+				top:0;
+				left:-30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

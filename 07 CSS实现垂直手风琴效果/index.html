@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS实现垂直手风琴效果</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			html,
+			body {
+				height: 100%;
+			}
+
+			.listbox {
+				width: 500px;
+				height: 700px;
+				margin: 0px auto;
+			}
+
+			.listbox .list {
+				width: 500px;
+				position: relative;
+			}
+
+			.listbox .list a {
+				display: block;
+				height: 35px;
+				width: 500px;
+				text-align: left;
+				line-height: 35px;
+				/* 线性渐变色 */
+				background: linear-gradient(#cecece, #8f8f8f);
+				border-radius: 5px;
+				padding-left: 5px;
+				text-decoration: none;
+				color: black;
+			}
+
+			.listbox .list p {
+				width: 500px;
+				height: 0;
+				overflow: auto;
+				transition: all 1s linear;
+				padding-left: 10px;
+				margin: 5px 0;
+				text-align: justify;
+			}
+
+			.listbox .list span {
+				/* 边框写小三角形 */
+				width: 0;
+				height: 0;
+				border-left: 5px solid rgba(0, 0, 0, 0);
+				border-right: 5px solid transparent;
+				border-top: 5px solid white;
+				border-bottom: 5px solid transparent;
+				/* 定位 */
+				position: absolute;
+				right: 15px;
+				top: 15px;
+			}
+              
+			  /* 当前活动窗口的控制  -->使用 :target 伪类选择器*/
+			.listbox .list:target p {
+				height: 100px;
+			}
+
+			.listbox .list a:hover,
+			.listbox .list:target a {
+				background: linear-gradient(#6bb2ff, #2288dd);
+				color: white;
+			}
+
+			.listbox .list:target span {
+				border-left: 5px solid white;
+				border-top: 5px solid transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="listbox">
+			<!-- 锚点 -->
+			<div class="list" id="one">
+				<a href="#one">Brank</a>
+				<span></span>
+				<p>If a reader is lost, it is generally because the writer has not been careful enough to keep him on the path.
+					This carelessness can take any number of forms. Perhaps a sentence is so excessively cluttered that the reader,
+					hacking his way through the verbiage, simply doesn't know what it means. Perhaps a sentence has been so shoddily
+					constructed that the reader could read it in any of several ways. Perhaps the writer has switched tenses, or has
+					switched pronouns in mid-sentence, so the reader loses track of when the action took place or who is talking.
+					Perhaps sentence B is not logical sequel to sentence A —— the writer, in whose head the connection is clear, has
+					not bothered to provide the missing link. Perhaps the writer has used an important word incorrectly by not taking
+					the trouble to look it up. He may think that "sanguine" and "sanguinary" mean the same thing, but the difference
+					is a bloody big one. The reader can only infer what the writer is trying to imply.
+				</p>
+			</div>
+			<div class="list" id="two">
+				<a href="#two">Arffg</a>
+				<span></span>
+				<p>If a reader is lost, it is generally because the writer has not been careful enough to keep him on the path.
+					This carelessness can take any number of forms. Perhaps a sentence is so excessively cluttered that the reader,
+					hacking his way through the verbiage, simply doesn't know what it means. Perhaps a sentence has been so shoddily
+					constructed that the reader could read it in any of several ways. Perhaps the writer has switched tenses, or has
+					switched pronouns in mid-sentence, so the reader loses track of when the action took place or who is talking.
+					Perhaps sentence B is not logical sequel to sentence A —— the writer, in whose head the connection is clear, has
+					not bothered to provide the missing link. Perhaps the writer has used an important word incorrectly by not taking
+					the trouble to look it up. He may think that "sanguine" and "sanguinary" mean the same thing, but the difference
+					is a bloody big one. The reader can only infer what the writer is trying to imply.
+				</p>
+			</div>
+			<div class="list" id="treen">
+				<a href="#treen">Cfgff</a>
+				<span></span>
+				<p>If a reader is lost, it is generally because the writer has not been careful enough to keep him on the path.
+					This carelessness can take any number of forms. Perhaps a sentence is so excessively cluttered that the reader,
+					hacking his way through the verbiage, simply doesn't know what it means. Perhaps a sentence has been so shoddily
+					constructed that the reader could read it in any of several ways. Perhaps the writer has switched tenses, or has
+					switched pronouns in mid-sentence, so the reader loses track of when the action took place or who is talking.
+					Perhaps sentence B is not logical sequel to sentence A —— the writer, in whose head the connection is clear, has
+					not bothered to provide the missing link. Perhaps the writer has used an important word incorrectly by not taking
+					the trouble to look it up. He may think that "sanguine" and "sanguinary" mean the same thing, but the difference
+					is a bloody big one. The reader can only infer what the writer is trying to imply.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
