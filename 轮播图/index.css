@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    border: 2px solid black;
+}
+
+.ul {
+    width: 600px;
+    height: 300px;
+    list-style: none;
+}
+
+.ul li {
+    width: 600px;
+    height: 300px;
+}
+
+.ul li img {
+    width: 600px;
+    height: 300px;
+}
