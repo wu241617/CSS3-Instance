@@ -1,2 +1,2 @@
 # CSS3-Instance
-CSS3实例--代码和笔记
+CSS3的一些实例--CSS3相关的代码和笔记。
